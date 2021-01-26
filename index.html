@@ -32,7 +32,7 @@
               <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm"/>
             </div>
             <div class="col-3">
-              <button class="btn btn-success w-100" id="current-location-button">My location</button>
+              <button class="btn btn-success w-100" id="current-location-button"> 📌</button>
           </div>
         </form>
         <h1 id="city"></h1>
@@ -45,7 +45,10 @@
             <div class="clearfix">
               <div class="float-left">
                 <span class="temperature" id="temperature"></span
-                  ><span class="units">°C</span>
+                  ><span class="units">
+                    <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
               </div>
             </div>
           </div>
