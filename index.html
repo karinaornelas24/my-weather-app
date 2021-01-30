@@ -9,61 +9,82 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Fraunces:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Fraunces:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-6">
-              <input
-              type="search"
-              placeholder="Type a city.."
-              autofocus="on"
-              autocomplete="off"
-              id="city-input"
-              class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3">
-              <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm"/>
-            </div>
-            <div class="col-3">
-              <button class="btn btn-success w-100" id="current-location-button"> 📌</button>
-          </div>
-        </form>
-        <h1 id="city"></h1>
-        <ul">
-          <li id="date"></li>
-          <li id="description"></li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <div class="float-left">
-                <span class="temperature" id="temperature"></span
-                  ><span class="units">
-                    <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                  </span>
+      <div class="weather-app-wrapper">
+        <div class="my-weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary shadow-sm"
+                />
+              </div>
+              <div class="col-1">
+                <button class="btn btn-succes" id="current-location-button">
+                  📌
+                </button>
               </div>
             </div>
-          </div>
-          <div class="col-6">
+          </form>
+          <div class="overview">
+            <h1 id="city"></h1>
             <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span>km/h</li>
+              <li id="date"></li>
+              <li id="description"></li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" ; alt="Shower" ; id="icon" ; class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>km/h</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row weather-forecast" id="forecast"></div>
         </div>
+        <small
+          ><a href="https://github.com/karinaornelas24/my-weather-app"
+            >Open-source code</a
+          >
+          by Ana Karina Ornelas</small
+        >
       </div>
     </div>
-    <p><a href="https://github.com/karinaornelas24/my-weather-app">Open-source code</a> by Ana Karina Ornelas</p>
     <script src="src/script.js"></script>
   </body>
 </html>
