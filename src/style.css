@@ -9,6 +9,8 @@ small {
   font-size: 10px;
   font-weight: bold;
   text-align: center;
+  margin: 0;
+  display: block;
 }
 
 a {
@@ -23,9 +25,14 @@ h1 {
   text-align: center;
 }
 
-ul {
+.description {
   text-align: center;
   padding: 0;
+}
+
+.details {
+  text-align: left;
+  margin: 0;
 }
 
 li {
@@ -34,10 +41,15 @@ li {
   display: block;
   font-size: 16px;
   font-weight: 100;
-  height: 19px;
-  text-align: center;
   margin: 0;
   padding: 0;
+}
+
+button {
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border: none;
 }
 
 .weather-app-wrapper {
@@ -58,11 +70,11 @@ li {
 .my-weather-app {
   display: block;
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
   padding: 20px;
-  border: 2px transparent;
-  box-shadow: inset;
   border-radius: 20px;
+  box-shadow: 0px 10px 13px -7px #000000,
+    inset 5px 5px 15px 5px rgba(213, 199, 198, 0.04);
   padding: 15px 30px;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/004/555/original/sun-rays-152304506-Shutterstock_Volodymyr-Goinyk.jpg?1611659433");
 }
@@ -79,10 +91,6 @@ li {
 }
 
 .weather-temperature .active {
-  height: 64px;
-  width: 64px;
-  display: block;
-  float: left;
   color: black;
   cursor: default;
 }
@@ -102,13 +110,13 @@ li {
 }
 
 .weather-temperature img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  height: 80px;
+  width: 80px;
 }
 
 .float-left {
   float: left !important;
+  margin: 0;
 }
 
 .weather-icon {
@@ -126,4 +134,35 @@ li {
 
 form {
   margin-bottom: 20px;
+}
+
+.weather-forecast {
+  margin-top: 10px;
+}
+
+.weather-forecast h3 {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+  width: 60px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  color: black;
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
