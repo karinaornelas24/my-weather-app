@@ -78,15 +78,16 @@ li {
   background-color: red;
 }
 
-.weather-temperature .icon .active {
+.weather-temperature .active {
   height: 64px;
   width: 64px;
   display: block;
   float: left;
+  color: black;
   cursor: default;
 }
 
-.weather-temperature .icon .active:hover {
+.weather-temperature .active:hover {
   text-decoration: none;
 }
 
